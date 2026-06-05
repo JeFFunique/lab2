@@ -22,11 +22,11 @@ jobs:
   job2: 
     runs-on: ubuntu-latest
     steps:
-    - name: Printing Custom Message
-      run: echo "the custom message is ${{ inputs.custom-message }}"
+      - name: Printing Custom Message
+        run: echo "the custom message is ${{ inputs.custom-message }}"
     
-    - name: Printing run-job boolean value
-      if: inputs.run-job == true
-      run: echo "the run job property input is ${{ inputs.run-job }}"
+      - name: Printing run-job boolean value
+        if: inputs.run-job == 'true'
+        run: echo "the run job property input is ${{ inputs.run-job }}"
 
 
